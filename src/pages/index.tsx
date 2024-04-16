@@ -105,11 +105,25 @@
 
 // export default Home;
 import React from "react";
-import NormalForm from "@/component/FormComponent/NormalForm";
+// import NormalForm from "@/component/FormComponent/NormalForm";
+import DynamicForm from "@/component/FormComponent/DynamicForm";
+
+const res = [
+  {
+    count: 2,
+    type: "adult",
+  },
+  {
+    count: 4,
+    type: "child",
+  },
+];
+
 const Home = () => {
   return (
     <>
-      <NormalForm />
+      {/* <NormalForm /> */}
+      <DynamicForm res={res} />
     </>
   );
 };
