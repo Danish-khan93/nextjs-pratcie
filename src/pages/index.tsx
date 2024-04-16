@@ -113,10 +113,7 @@ const res = [
     count: 2,
     type: "adult",
   },
-  {
-    count: 4,
-    type: "child",
-  },
+  
 ];
 
 const Home = () => {
