@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@mui/material";
+import { Button,Box } from "@mui/material";
 import { Inter } from "next/font/google";
 import { useForm, useFieldArray } from "react-hook-form";
 const inter = Inter({ subsets: ["latin"] });
@@ -80,17 +80,18 @@ function Home() {
             </div>
           );
         })}
-
-        <DataField control={control} name="date" />
-        <InputField
-          name="phone"
-          control={control}
-          rules={rules}
-          placeholder="enter number"
-          type="number"
-          label="Phone Number"
-        />
-        <SelectField control={control} label="Age" name="age" rules={rules} />
+        <Box className="flex flex-col gap-10">
+          <DataField control={control} name="date" />
+          <InputField
+            name="phone"
+            control={control}
+            rules={rules}
+            placeholder="enter number"
+            type="number"
+            label="Phone Number"
+          />
+          <SelectField control={control} label="Age" name="age" rules={rules} />
+        </Box>
         <Button
           className="bg-[#000] text-[#fff] hover:bg-[#000] hover:text-[#fff]"
           type="submit"
